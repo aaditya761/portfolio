@@ -1,0 +1,125 @@
+$nav_height:4rem;
+
+.nav_container{
+    height: $nav_height;
+    width: 100vw;
+    background: white;
+    z-index: 2000;
+    border-bottom: 1px solid lightgray;
+    position: fixed;
+    //background: linear-gradient(90deg, white, lightgray);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3rem;
+}
+
+.nav_title{
+    font-size: 1.8rem;
+    background: -webkit-linear-gradient(0deg, #4f46e5,black);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
+
+.hero_container{
+    padding-top: $nav_height;
+    width: 100%;
+}
+
+.bg_container{
+    height: calc(100vh - $nav_height);
+    background-image: url("../public/images/hero.webp");
+    background-size: cover;
+}
+
+.left_blur_class {
+    position: absolute;
+    filter: blur(60px);
+    z-index: -50;
+    opacity: 0.3;
+    border-radius: 100px;
+    background-color: #68d5e9;
+    left: -2rem;
+    top: -12px;
+    width: 24rem;
+    height: 30rem;
+    animation: scaleA 3s linear infinite;
+}
+
+@keyframes scaleA {
+    0% {
+        transform: scale(1);
+    }
+    24% {
+        transform: scale(1.8);
+    }
+    50% {
+        transform: scale(1.4);
+    }
+    75%{
+        transform: scale(1.8);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+.right_blur_class {
+    position: absolute;
+    filter: blur(60px);
+    z-index: -50;
+    opacity: 0.3;
+    border-radius: 100px;
+    background-color: #6366f1;
+    right: -2rem;
+    bottom: -12px;
+    width: 24rem;
+    height: 30rem;
+    animation: scaleB 3s linear infinite;
+}
+
+@keyframes scaleB {
+    0% {
+        transform: scale(1.8);
+    }
+    24% {
+        transform: scale(1.4);
+    }
+    50% {
+        transform: scale(1.8);
+    }
+    75%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.8);
+    }
+}
+
+.nav_right{
+    display: flex;
+}
+
+.nav_item{
+    padding-left: 4rem;
+    font-weight: 500;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+.hero_title{
+    text-align: center;
+    margin-top: 4rem;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 3.5rem;
+}
+
+.gradient_text{
+    background: linear-gradient(to right, #0891b2, #2563eb, #4f46e5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
