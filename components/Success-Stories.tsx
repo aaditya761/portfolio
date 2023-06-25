@@ -1,6 +1,8 @@
 "use client"
 import variables from '../styles/component.module.scss';
-import Image from 'next/image'
+import Image from 'next/image';
+import {Montserrat} from "next/font/google";
+const montserrat = Montserrat({ subsets: ['latin'] })
 
 const SuccessStories = () => {
 
@@ -45,28 +47,31 @@ const SuccessStories = () => {
         },
         {
             id: "4",
-            image: require("../public/stanza.png"),
-            url: "https://www.stanzaliving.com/",
-            industry:"Co-living",
-            name: "Stanza Living",
-            description: "India's largest managed-accommodation space provider is home to Students and Working professionals across 26 cities in India"
+            image: require("../public/images/maker.png"),
+            url: "https://makerandson.com/",
+            industry:"Luxury Sofas",
+            name: "Maker&Son",
+            description: "Luxury Sofas and Beds Handmade In The UK From Natural Sustainable Materials, Bedroom Furniture, Bespoke Mobile ShowroomDog Beds, Mattress & Topper Rugs"
 
         }
     ]
 
-    return (<div className={variables.success_section}>
+    return (<div className={variables.section}>
+        <div style={{padding:"4rem", color:"white"}} className={`${variables.section_title} ${montserrat.className}`}>
+            Some of Our Clients
+        </div>
         <div className={variables.success_container}>
             {
                 data.map((item) => {
                     console.log(item)
                     return (
                         <div onClick={()=>{openLink(item.url)}} className={variables.success_card} key={item.id}>
-                            <div>
+                            <div style={{padding:"1rem"}}>
                                 <Image className={variables.success_card_image} src={item.image}
                                        alt={"success-story-image"}/>
                             </div>
                             <div className={variables.success_industry_div}>
-                                <div className={variables.success_industry_text}>Industry: {item.industry}</div>
+                                <div className={`${variables.success_industry_text} ${montserrat.className}`}>Industry: {item.industry}</div>
                             </div>
                             <div className={variables.success_desc_cont}>
                                 <div className={variables.success_title}>

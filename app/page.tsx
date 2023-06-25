@@ -3,6 +3,8 @@ import About from "@/components/About";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import SuccessStories from "@/components/Success-Stories";
+import WhyUs from "@/components/WhyUs";
+import Transform from "@/components/Transform";
 
 const inter = Inter({
     subsets: ["latin"],
@@ -12,12 +14,14 @@ const inter = Inter({
 export default function Home() {
     return (
         <div className={inter.className}>
-            <main>
+            <div>
                 <Navbar/>
                 <Hero/>
                 <SuccessStories />
+                <WhyUs />
+                <Transform />
                 <About/>
-            </main>
+            </div>
         </div>
     )
 }
