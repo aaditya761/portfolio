@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+
+    function isValid(stale, latest, otjson) {
+        let currString = stale;
+        let cursorPosition = 0;
+        let json = JSON.parse(otjson)
+        for (let i = 0; i < json.length; i++) {
+            let item = json[i];
+            if (item["op"] === "skip") {
+                // skip operation goes beyond the end of the string
+                if (currString.length < item["count"] + cursorPosition) {
+                    return false;
+                }
+                // cursor moves ahead
+                cursorPosition += item["count"];
+            }
+            if (item["op"] === "delete") {
+                // delete operation goes beyond the end of the string
+                if (currString.length < item["count"] + cursorPosition) {
+                    return false;
+                }
+                let temp = currString;
+                currString = temp.substring(0, cursorPosition) + temp.substring(cursorPosition + item["count"], currString.length)
+            }
+            if (item["op"] === "insert") {
+                currString = currString.substring(0, cursorPosition) + item["chars"] + currString.substring(cursorPosition);
+                //cursor moves ahead
+                cursorPosition += item["chars"].length
+            }
+        }
+
+        // if the string after all the operations is same as the latest file contents, return true
+        return currString === latest;
+    }
+
+    console.log(isValid('Repl.it uses operational transformations to keep everyone in a multiplayer repl in sync.',
+        'We use operational transformations to keep everyone in a multiplayer repl in sync.',
+        '[{"op": "delete", "count": 7}, {"op": "insert", "chars": "We"}, {"op": "skip", "count": 4}, {"op": "delete", "count": 1}]'))
+
+</script>
+</body>
+</html>

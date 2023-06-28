@@ -63,7 +63,6 @@ const SuccessStories = () => {
         <div className={variables.success_container}>
             {
                 data.map((item) => {
-                    console.log(item)
                     return (
                         <div onClick={()=>{openLink(item.url)}} className={variables.success_card} key={item.id}>
                             <div style={{padding:"1rem"}}>
@@ -74,10 +73,10 @@ const SuccessStories = () => {
                                 <div className={`${variables.success_industry_text} ${montserrat.className}`}>Industry: {item.industry}</div>
                             </div>
                             <div className={variables.success_desc_cont}>
-                                <div className={variables.success_title}>
+                                <div className={`${variables.success_title} ${montserrat.className}`}>
                                     {item.name}
                                 </div>
-                                <div className={variables.success_desc}>
+                                <div className={`${variables.success_desc} ${montserrat.className}`}>
                                     {item.description}
                                 </div>
                             </div>

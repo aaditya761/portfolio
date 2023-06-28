@@ -1,10 +1,9 @@
 import variables from "../styles/component.module.scss";
-import {Inter} from "next/font/google";
-const inter = Inter({ subsets: ['latin'] })
-
+import {Montserrat} from "next/font/google";
+const montserrat = Montserrat({ subsets: ['latin'] })
 function Hero() {
     return (<div className={variables.hero_container}>
-        <div className={`${variables.hero_title} ${inter.className}`}>
+        <div className={`${variables.hero_title} ${montserrat.className}`}>
             <div>
                 Your Vision, <span className={variables.gradient_text}>Our Expertise</span>
             </div>
@@ -14,7 +13,7 @@ function Hero() {
         <div className={variables.bg_container}>
             <div className={variables.flex}>
                 <div className={variables.hero_contact_btn}>
-                    <div className={`${variables.hero_contact_btn_text} ${inter.className}`}>Contact Us</div>
+                    <div className={`${variables.hero_contact_btn_text} ${montserrat.className}`}>Contact Us</div>
                 </div>
             </div>
         </div>

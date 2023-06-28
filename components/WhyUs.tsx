@@ -4,16 +4,16 @@ const montserrat = Montserrat({ subsets: ['latin'] })
 
 
 const WhyUs = () => {
-    return (<div style={{overflow: "hidden", height: "100vh", background: "rgba(230,230,230, 1)"}}>
-        <div style={{display: "flex", height: "100%"}}>
-            <div style={{width: "40%", height: '100%', display:"flex", flexDirection:"column", justifyContent:"center"}}>
+    return (<div className={variables.why_us_section}>
+        <div className={variables.why_us_inner}>
+            <div className={variables.why_us_left}>
                 <div style={{paddingTop: "2rem"}} className={`${variables.section_title} ${montserrat.className}`}>
                     Why People Choose Us
                 </div>
             </div>
-            <div style={{width: "60%", height: '100%', display:'flex', alignItems:"center"}}>
+            <div className={variables.why_us_right}>
                 <div className={variables.why_us_container}>
-                    <div className={variables.wu_item}>
+                    <div style={{borderLeft:'15px solid #ff9e18', borderRight:'15px solid #ff9e18'}} className={variables.wu_item}>
                         <div className={`${variables.wu_title} ${montserrat.className}`}>
                             Expertise
                         </div>
@@ -24,7 +24,7 @@ const WhyUs = () => {
                             exceptional results.
                         </div>
                     </div>
-                    <div className={variables.wu_item}>
+                    <div style={{borderLeft:"15px solid #00263e", borderRight:"15px solid #00263e"}} className={variables.wu_item}>
                         <div className={`${variables.wu_title} ${montserrat.className}`}>
                             Customized Solutions
                         </div>
@@ -35,7 +35,7 @@ const WhyUs = () => {
                             your software to adapt and grow with your evolving business.
                         </div>
                     </div>
-                    <div className={variables.wu_item}>
+                    <div style={{borderLeft:"15px solid #00c18b", borderRight:"15px solid #00c18b"}} className={variables.wu_item}>
                         <div className={`${variables.wu_title} ${montserrat.className}`}>
                             Timely Delivery
                         </div>

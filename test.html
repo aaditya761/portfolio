@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+
+    function isValid(stale, latest, otjson) {
+        let currString = stale;
+        let cursor_position = 0;
+        let json = JSON.parse(otjson)
+        json.forEach((item) => {
+            console.log("jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj")
+            console.log(currString.length)
+            console.log(cursor_position)
+            if (item["op"] === "skip") {
+                console.log("yyyyyyyyyyyyyyyyyyyyyyyy")
+                console.log(item["count"]+cursor_position)
+                console.log(currString.length)
+                if (currString.length < item["count"]+cursor_position) {
+                    console.log("kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk")
+                    return false;
+                }
+                cursor_position += item["count"];
+            }
+            if (item["op"] === "delete") {
+                if (currString.length < item["count"] + cursor_position) {
+                    return false;
+                }
+                let temp = currString;
+                currString = temp.substring(0, cursor_position) + temp.substring(cursor_position+item["count"], currString.length)
+            }
+            if (item["op"] === "insert") {
+                currString = currString.substring(0, cursor_position) + item["chars"] + currString.substring(cursor_position);
+                cursor_position+=item["chars"].length
+            }
+        })
+
+        console.log("88888888888888888888888888888")
+        console.log(currString)
+        return currString === latest;
+    }
+
+    console.log(isValid('Repl.it uses operational transformations to keep everyone in a multiplayer repl in sync.',
+        'Repl.it uses operational transformations.',
+        '[{"op": "skip", "count": 40}, {"op": "delete", "count": 47}]'))
+
+</script>
+</body>
+</html>
