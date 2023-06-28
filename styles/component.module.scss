@@ -158,9 +158,10 @@ $nav_height: 4rem;
 
 .section {
   width: 100%;
-  height: calc(100vh - $nav_height);
+  height: 100vh;
   overflow: hidden;
-  background-image: url("../public/images/numbers.png");
+  background-color: #00263e;
+  //background-image: url("../public/images/numbers.png");
 }
 
 
@@ -177,15 +178,19 @@ $nav_height: 4rem;
   background: white;
   width: 23%;
   border-radius: 10px;
-  height: 26rem;
+  height: 28rem;
   cursor: pointer;
-  border-top: 15px solid #007bbd;
-  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
-  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
-  0 12.5px 10px rgba(0, 0, 0, 0.06),
-  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
-  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
-  0 100px 80px rgba(0, 0, 0, 0.12)
+  border-top: 12px solid #00c18b;
+  //box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  //0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  //0 12.5px 10px rgba(0, 0, 0, 0.06),
+  //0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  //0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+  //0 100px 80px rgba(0, 0, 0, 0.12)
+}
+
+.success_card_ing_div{
+  padding: 2rem;
 }
 
 .success_card:hover{
@@ -229,15 +234,17 @@ $nav_height: 4rem;
 }
 
 .success_desc {
-  font-weight: 400;
-  font-size: 0.8rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.3px;
   line-height: 1.4rem;
+  color: rgb(107, 114, 128);
+  font-weight: 500;
 }
 
 .why_us_section {
   overflow: hidden;
   height: 100vh;
-  background: rgba(230, 230, 230, 1);
+  background: #e8eaef;
 }
 
 .why_us_inner {
@@ -286,9 +293,12 @@ $nav_height: 4rem;
 }
 
 .wu_description {
-  font-size: 0.9rem;
-  line-height: 1.5rem;
+  font-size: 0.85rem;
+  line-height: 1.8rem;
   text-align: left;
+  letter-spacing: 0.3px;
+  color: rgb(107, 114, 128);
+  font-weight: 500;
 }
 
 .wu_description li {
@@ -299,8 +309,11 @@ $nav_height: 4rem;
 .transform_container {
   background-color: #00263e;
   color: #fff;
-  padding: 100px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
+  height: calc(100vh - $nav_height);
 }
 
 .transform_inner {
@@ -347,6 +360,65 @@ $nav_height: 4rem;
   font-weight: 600;
 }
 
+.process_container{
+  width: 100%;
+  max-width: 100vw;
+  background: #e8eaef;
+  padding: 8rem 4rem;
+}
+
+.process_subtitle{
+  text-align: center;
+  line-height: 3rem;
+  font-size: 1.5rem;
+  color: rgb(107, 114, 128);
+  font-weight: 400;
+}
+
+.process_card_cont{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.process_card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 21%;
+  height: 18rem;
+}
+
+.process_card_icon_div{
+  background: white;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.process_card_title{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: rgb(107, 114, 128);
+  letter-spacing: 1px;
+}
+
+.process_card_desc{
+  color: rgb(107, 114, 128);
+  text-align: justify;
+  font-size: 0.9rem;
+  line-height: 1.3rem;
+  font-weight: 500;
+}
 
 $breakpoint-tablet: 768px;
 @media only screen and (max-width: 600px) {
@@ -376,6 +448,7 @@ $breakpoint-tablet: 768px;
     font-weight: 600;
     cursor: pointer;
   }
+
 
   .mobile_nav {
     position: fixed;
@@ -473,6 +546,49 @@ $breakpoint-tablet: 768px;
   .wu_item{
     margin-bottom: 2rem;
   }
+
+  .section_title {
+    font-size: 1rem;
+  }
+
+  .process_subtitle{
+    margin-top: 1rem;
+    line-height: 1.5rem;
+    font-size: 1rem;
+  }
+
+  .process_card_cont{
+    display: block;
+    margin-top: 3rem;
+  }
+  .process_card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: auto;
+    margin-bottom: 3rem;
+  }
+
+  .process_card_icon_div{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 2rem;
+  }
+
+  .process_card_title{
+    font-size: 1rem;
+  }
+
+  .process_card_desc{
+    color: rgb(107, 114, 128);
+    text-align: justify;
+    font-size: 0.8rem;
+    line-height: 1.3rem;
+    font-weight: 500;
+  }
+
 
 
 }

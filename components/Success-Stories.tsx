@@ -65,7 +65,7 @@ const SuccessStories = () => {
                 data.map((item) => {
                     return (
                         <div onClick={()=>{openLink(item.url)}} className={variables.success_card} key={item.id}>
-                            <div style={{padding:"1rem"}}>
+                            <div className={variables.success_card_ing_div}>
                                 <Image className={variables.success_card_image} src={item.image}
                                        alt={"success-story-image"}/>
                             </div>
