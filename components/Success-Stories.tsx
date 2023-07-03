@@ -5,7 +5,22 @@ import {Montserrat} from "next/font/google";
 
 const montserrat = Montserrat({subsets: ['latin']})
 
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
+
+
 const SuccessStories = () => {
+
+    const indicatorStyles = {
+        background: '#fff',
+        width: 14,
+        height: 14,
+        borderRadius:7,
+        cursor:"pointer",
+        border:"2px solid black",
+        display: 'inline-block',
+        margin: '-5px 8px',
+    };
 
     const openLink = (url: string) => {
         window.open(url, "_blank")
@@ -63,7 +78,34 @@ const SuccessStories = () => {
                  className={`${variables.section_title} ${montserrat.className}`}>
                 Some of Our Clients
             </div>
-            <div className={variables.success_container}>
+            <Carousel
+                renderIndicator={(onClickHandler, isSelected, index, label) => {
+                    if (isSelected) {
+                        return (
+                            <li
+                                onClick={onClickHandler}
+                                style={{...indicatorStyles, background: '#000'}}
+                            />
+                        );
+                    }else {
+                        return (
+                            <li
+                                onClick={onClickHandler}
+                                style={{...indicatorStyles, background: 'white'}}
+                            />
+                        );
+                    }
+                }}
+                showStatus={false}
+                infiniteLoop={true}
+                autoPlay={true}
+                showArrows={false}
+                thumbWidth={160}
+                centerMode={true}
+                transitionTime={3000}
+                centerSlidePercentage={30}
+            >
+            {/*<div className={variables.success_container}>*/}
                 {
                     data.map((item) => {
                         return (
@@ -71,6 +113,7 @@ const SuccessStories = () => {
                                 openLink(item.url)
                             }} className={variables.success_card} key={item.id}>
                                 <div className={variables.success_card_ing_div}>
+                                    <div className={variables.success_card_overlay}></div>
                                     <Image className={variables.success_card_image} src={item.image}
                                            alt={"success-story-image"}/>
                                 </div>
@@ -90,7 +133,8 @@ const SuccessStories = () => {
                         )
                     })
                 }
-            </div>
+            {/*</div>*/}
+            </Carousel>
         </div>
     </div>)
 }
