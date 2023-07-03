@@ -1,8 +1,13 @@
+"use client"
 import {GrDocumentText} from "react-icons/gr";
-import {PiListMagnifyingGlass} from "react-icons/pi";
 import variables from "../styles/component.module.scss";
 import {Montserrat} from "next/font/google";
 const montserrat = Montserrat({ subsets: ['latin'] })
+import Lottie from "lottie-react";
+import Discover from "../public/images/lottie/discover1.json";
+import Strategize from "../public/images/lottie/planning.json";
+import Design from "../public/images/lottie/design.json";
+import Develop from "../public/images/lottie/develop.json";
 
 const Process = () => {
     return (<div className={variables.process_container}>
@@ -15,7 +20,7 @@ const Process = () => {
         <div className={variables.process_card_cont}>
             <div className={variables.process_card}>
                 <div className={variables.process_card_icon_div}>
-                    <PiListMagnifyingGlass/>
+                    <Lottie animationData={Discover} />
                 </div>
                 <div className={`${variables.process_card_title} ${montserrat.className}`}>
                     Discover
@@ -27,7 +32,7 @@ const Process = () => {
             </div>
             <div className={variables.process_card}>
                 <div className={variables.process_card_icon_div}>
-                    <GrDocumentText/>
+                    <Lottie animationData={Strategize} />
                 </div>
                 <div className={`${variables.process_card_title} ${montserrat.className}`}>
                     Strategize
@@ -39,7 +44,7 @@ const Process = () => {
             </div>
             <div className={variables.process_card}>
                 <div className={variables.process_card_icon_div}>
-                    <GrDocumentText/>
+                    <Lottie animationData={Design} />
                 </div>
                 <div className={`${variables.process_card_title} ${montserrat.className}`}>
                     Design
@@ -51,7 +56,7 @@ const Process = () => {
             </div>
             <div className={variables.process_card}>
                 <div className={variables.process_card_icon_div}>
-                    <GrDocumentText/>
+                    <Lottie animationData={Develop} />
                 </div>
                 <div className={`${variables.process_card_title} ${montserrat.className}`}>
                     Develop
