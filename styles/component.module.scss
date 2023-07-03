@@ -420,6 +420,31 @@ $nav_height: 4rem;
   font-weight: 500;
 }
 
+.contact_input{
+  padding: .5rem;
+  background-color: whitesmoke;
+  border-radius: .5rem;
+  width: 19rem;
+  height: 3rem;
+  color: black;
+}
+
+.contact_textarea{
+  padding: .5rem;
+  background-color: whitesmoke;
+  border-radius: .5rem;
+  width: 40rem;
+  margin-bottom: 1rem;
+  color: black;
+}
+
+.contact_form{
+  display: flex;
+  gap: 2rem;
+  margin: .5rem;
+  padding: 1rem;
+}
+
 $breakpoint-tablet: 768px;
 @media only screen and (max-width: 600px) {
   .nav_container {
@@ -588,7 +613,30 @@ $breakpoint-tablet: 768px;
     line-height: 1.3rem;
     font-weight: 500;
   }
-
+  .contact_input{
+    padding: .5rem;
+    background-color: whitesmoke;
+    border-radius: .5rem;
+    width: 20rem;
+    height: 3rem;
+    color: black;
+  }
+  
+  .contact_textarea{
+    padding: .5rem;
+    background-color: whitesmoke;
+    border-radius: .5rem;
+    width: 20rem;
+    margin-bottom: 1rem;
+    color: black;
+  }
+  
+  .contact_form{
+    display: flex;
+    flex-direction: column;
+    margin: .5rem;
+    padding: 1rem;
+  }
 
 
 }
