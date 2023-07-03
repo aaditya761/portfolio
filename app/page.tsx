@@ -8,6 +8,7 @@ import Transform from "@/components/Transform";
 import Process from "@/components/Process";
 import Services from "@/components/Services";
 import ContactUs from '@/components/ContactUs';
+import Testimonials from "@/components/Testimonials";
 
 const inter = Inter({
     subsets: ["latin"],
@@ -20,13 +21,13 @@ export default function Home() {
             <div>
                 <Navbar/>
                 <Hero/>
-                <SuccessStories />
-                <WhyUs />
-                <Transform />
-                <About/>
-                <Process />
-                <ContactUs />
                 <Services />
+                <Process />
+                <Transform />
+                <WhyUs />
+                <SuccessStories />
+                <Testimonials/>
+                <ContactUs />
             </div>
         </div>
     )
