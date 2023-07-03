@@ -7,7 +7,7 @@ const WhyUs = () => {
     return (<div className={variables.why_us_section}>
         <div className={variables.why_us_inner}>
             <div className={variables.why_us_left}>
-                <div style={{paddingTop: "2rem"}} className={`${variables.section_title} ${montserrat.className}`}>
+                <div className={`${variables.section_title} ${montserrat.className}`}>
                     Why People Choose Us
                 </div>
             </div>
