@@ -207,6 +207,7 @@ $nav_height: 4rem;
   -webkit-transition: transform 1.05s ease-in-out;
   -moz-transition:transform 1.05s ease-in-out;
   -ms-transition:transform 1.05s ease-in-out;
+
 }
 
 .success_card_image {
@@ -252,8 +253,9 @@ $nav_height: 4rem;
 
 .why_us_section {
   overflow: hidden;
-  background: #e8eaef;
+  //background: #e8eaef;
   padding: 3rem 0;
+  background-image: url("../public/images/launch-background-5fc755ae58f66b2de2493f85e8e64f82.svg");
 }
 
 .why_us_inner {
@@ -424,9 +426,18 @@ $nav_height: 4rem;
   font-weight: 500;
 }
 
+.services_container{
+  padding: 3rem;
+  background-image: url("../public/images/launch-background-5fc755ae58f66b2de2493f85e8e64f82.svg");
+}
+
 .services_card_image_div{
   width: 5rem;
   height: 5rem;
+}
+
+.services_inner{
+  display: flex;
 }
 
 .services_card_image{
