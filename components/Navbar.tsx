@@ -9,6 +9,12 @@ const montserrat = Montserrat({subsets: ['latin']});
 
 function Navbar() {
 
+    const contactUs = (id:string)=>{
+        const section = document.querySelector(id)!;
+        section.scrollIntoView( { behavior: 'smooth', block: 'start' } );
+        setIsNavbarOpen(false);
+    }
+
     const [isNavbarOpen, setIsNavbarOpen] = useState(false);
 
     const toggleNavbar=()=>{
@@ -24,22 +30,19 @@ function Navbar() {
                     </div>
                 </div>
                 <div className={`${variables.nav_right} ${montserrat.className}`}>
-                    <div className={variables.nav_item}>
+                    <div onClick={()=>{contactUs("#services")}} className={variables.nav_item}>
                         Services
                     </div>
-                    <div className={variables.nav_item}>
-                        Technologies
-                    </div>
-                    <div className={variables.nav_item}>
+                    <div onClick={()=>{contactUs("#clients")}}  className={variables.nav_item}>
                         Clients
                     </div>
-                    <div className={variables.nav_item}>
+                    <div onClick={()=>{contactUs("#testimonials")}}  className={variables.nav_item}>
                         Testimonials
                     </div>
                     <div className={variables.nav_item}>
                         About Us
                     </div>
-                    <div className={variables.nav_item}>
+                    <div onClick={()=>{contactUs("#contact-us")}} className={variables.nav_item}>
                         Contact Us
                     </div>
                 </div>
@@ -57,22 +60,19 @@ function Navbar() {
                     <div className={variables.close_icon_div}>
                         <IoClose onClick={toggleNavbar}  color={"black"} size={36} />
                     </div>
-                    <div className={variables.nav_item_mobile}>
+                    <div onClick={()=>{contactUs("#services")}} className={variables.nav_item_mobile}>
                         Services
                     </div>
-                    <div className={variables.nav_item_mobile}>
-                        Technologies
-                    </div>
-                    <div className={variables.nav_item_mobile}>
+                    <div onClick={()=>{contactUs("#clients")}}  className={variables.nav_item_mobile}>
                         Clients
                     </div>
-                    <div className={variables.nav_item_mobile}>
+                    <div onClick={()=>{contactUs("#testimonials")}}  className={variables.nav_item_mobile}>
                         Testimonials
                     </div>
                     <div className={variables.nav_item_mobile}>
                         About Us
                     </div>
-                    <div className={variables.nav_item_mobile}>
+                    <div onClick={()=>{contactUs("#contact-us")}} className={variables.nav_item_mobile}>
                         Contact Us
                     </div>
                 </div>

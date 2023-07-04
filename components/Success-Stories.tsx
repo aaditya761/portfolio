@@ -36,7 +36,7 @@ const SuccessStories = () => {
     }> = [
         {
             id: "1",
-            image: require("../public/images/stanza.png"),
+            image: require("../public/images/clients/stanza.png"),
             url: "https://www.stanzaliving.com/",
             industry: "Co-living",
             name: "Stanza Living",
@@ -45,7 +45,7 @@ const SuccessStories = () => {
         },
         {
             id: "2",
-            image: require("../public/images/asian.webp"),
+            image: require("../public/images/clients/asian.webp"),
             url: "https://www.asianfootwears.com/",
             industry: "Footwear",
             name: "Asian Footwear",
@@ -54,7 +54,7 @@ const SuccessStories = () => {
         },
         {
             id: "3",
-            image: require("../public/images/seniority.jpg"),
+            image: require("../public/images/clients/seniority.jpg"),
             url: "https://seniority.in/",
             industry: "Health Care",
             name: "Seniority",
@@ -63,7 +63,7 @@ const SuccessStories = () => {
         },
         {
             id: "4",
-            image: require("../public/images/maker.png"),
+            image: require("../public/images/clients/maker.png"),
             url: "https://makerandson.com/",
             industry: "Luxury Sofas",
             name: "Maker&Son",
@@ -72,7 +72,7 @@ const SuccessStories = () => {
         }
     ]
 
-    return (<div className={variables.section}>
+    return (<div id={"clients"} className={variables.section}>
         <div className={variables.success_inner}>
             <div style={{padding: "4rem", color: "white"}}
                  className={`${variables.section_title} ${montserrat.className}`}>

@@ -47,7 +47,7 @@ const ContactUs = () => {
   };
 
   return (
-    <div className={variables.transform_container}>
+    <div id={"contact-us"} className={variables.transform_container}>
       <div className={variables.transform_inner}>
         <div className={`${variables.transform_title} ${montserrat.className}`}>
           Wanna talk with us

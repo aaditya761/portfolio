@@ -20,7 +20,7 @@ const Process = () => {
         <div className={variables.process_card_cont}>
             <div className={variables.process_card}>
                 <div className={variables.process_card_icon_div}>
-                    <Lottie animationData={Discover} />
+                    <Lottie style={{height:"15rem"}} animationData={Discover} />
                 </div>
                 <div className={`${variables.process_card_title} ${montserrat.className}`}>
                     Discover
@@ -32,7 +32,7 @@ const Process = () => {
             </div>
             <div className={variables.process_card}>
                 <div className={variables.process_card_icon_div}>
-                    <Lottie animationData={Strategize} />
+                    <Lottie style={{height:"15rem"}} animationData={Strategize} />
                 </div>
                 <div className={`${variables.process_card_title} ${montserrat.className}`}>
                     Strategize
@@ -44,7 +44,7 @@ const Process = () => {
             </div>
             <div className={variables.process_card}>
                 <div className={variables.process_card_icon_div}>
-                    <Lottie animationData={Design} />
+                    <Lottie style={{height:"15rem"}} animationData={Design} />
                 </div>
                 <div className={`${variables.process_card_title} ${montserrat.className}`}>
                     Design
@@ -56,7 +56,7 @@ const Process = () => {
             </div>
             <div className={variables.process_card}>
                 <div className={variables.process_card_icon_div}>
-                    <Lottie animationData={Develop} />
+                    <Lottie style={{height:"15rem"}} animationData={Develop} />
                 </div>
                 <div className={`${variables.process_card_title} ${montserrat.className}`}>
                     Develop

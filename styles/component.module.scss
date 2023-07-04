@@ -49,14 +49,22 @@ $nav_height: 4rem;
 }
 
 .hero_container {
+  position: relative;
   width: 100%;
-  height: calc(100vh - $nav_height);
+  height: 100vh;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
+.hero_left{
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 3rem;
+}
 
 .left_blur_class {
   position: absolute;
@@ -160,7 +168,7 @@ $nav_height: 4rem;
 
 .services_card_title {
   color: rgb(107, 114, 128);
-  font-size: 2rem;
+  font-size: 1.5rem;
   text-align: left;
   font-weight: 600;
   margin-bottom: 1rem;
@@ -433,10 +441,11 @@ $nav_height: 4rem;
 
 .process_card_icon_div{
   background: white;
-  height: 15rem;
+  height: 16rem;
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 
@@ -465,6 +474,8 @@ $nav_height: 4rem;
   margin-bottom: 1.5rem;
   height: 3rem;
   color: black;
+  font-size: 1rem;
+  font-weight: 500;
 }
 
 .contact_textarea{
@@ -474,6 +485,7 @@ $nav_height: 4rem;
   width: 40rem;
   margin-bottom: 1rem;
   color: black;
+  font-size: 1rem;
 }
 
 .services_container{
@@ -487,7 +499,6 @@ $nav_height: 4rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 3rem;
   border-radius: 10px;
   background-image: url("../public/images/launch-background-5fc755ae58f66b2de2493f85e8e64f82.svg");
 }
@@ -506,7 +517,7 @@ $nav_height: 4rem;
 
 .services_description {
   font-size: 1rem;
-  line-height: 1.8rem;
+  line-height: 1.7rem;
   text-align: justify;
   letter-spacing: 0.3px;
   color: rgb(107, 114, 128);

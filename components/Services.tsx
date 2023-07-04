@@ -11,7 +11,7 @@ import AI from "../public/images/lottie/ai.json";
 const montserrat = Montserrat({subsets: ['latin']})
 
 const Services = () => {
-    return (<div className={variables.services_container}>
+    return (<div id={"services"} className={variables.services_container}>
         <div className={`${variables.section_title} ${montserrat.className}`}>
             Our Services
         </div>
