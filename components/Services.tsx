@@ -12,10 +12,10 @@ const montserrat = Montserrat({subsets: ['latin']})
 
 const Services = () => {
     return (<div id={"services"} className={variables.services_container}>
-        <div className={`${variables.section_title} ${montserrat.className}`}>
+        <div className={`${variables.section_title} ${variables.fadeIn} ${montserrat.className}`}>
             Our Services
         </div>
-        <div className={variables.services_inner}>
+        <div className={`${variables.fadeIn} ${variables.services_inner}`}>
             <div className={variables.services_card_image_cont}>
                 <div>
                     <Lottie style={{height:"30rem"}} animationData={UXDesign} />
@@ -30,7 +30,7 @@ const Services = () => {
                 </div>
             </div>
         </div>
-        <div className={variables.services_inner}>
+        <div className={`${variables.fadeIn} ${variables.services_inner}`}>
             <div className={variables.services_card_text_div}>
                 <div className={`${variables.services_card_title} ${montserrat.className}`}>
                     Web Development
@@ -47,7 +47,7 @@ const Services = () => {
                 </div>
             </div>
         </div>
-        <div className={variables.services_inner}>
+        <div className={`${variables.fadeIn} ${variables.services_inner}`}>
             <div className={variables.services_card_image_cont}>
                 <div>
                     <Lottie style={{height:"30rem", transform:"scale(0.8)"}} animationData={Mobile} />
@@ -62,7 +62,7 @@ const Services = () => {
                 </div>
             </div>
         </div>
-        <div className={variables.services_inner}>
+        <div className={`${variables.fadeIn} ${variables.services_inner}`}>
             <div className={variables.services_card_text_div}>
                 <div className={`${variables.services_card_title} ${montserrat.className}`}>
                     AI Development

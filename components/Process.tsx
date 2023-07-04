@@ -11,13 +11,13 @@ import Develop from "../public/images/lottie/develop.json";
 
 const Process = () => {
     return (<div className={variables.process_container}>
-        <div className={`${variables.section_title} ${montserrat.className}`}>
+        <div className={`${variables.section_title} ${variables.fadeIn} ${montserrat.className}`}>
             A sneak-peek into our process
         </div>
-        <div className={`${variables.process_subtitle} ${montserrat.className}`}>
+        <div className={`${variables.process_subtitle} ${variables.fadeIn} ${montserrat.className}`}>
             See how we build products that are loved by millions
         </div>
-        <div className={variables.process_card_cont}>
+        <div className={`${variables.fadeIn} ${variables.process_card_cont}`}>
             <div className={variables.process_card}>
                 <div className={variables.process_card_icon_div}>
                     <Lottie style={{height:"15rem"}} animationData={Discover} />

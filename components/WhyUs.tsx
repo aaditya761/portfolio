@@ -13,7 +13,7 @@ const WhyUs = () => {
             </div>
             <div className={variables.why_us_right}>
                 <div className={variables.why_us_container}>
-                    <div style={{borderLeft:'15px solid #ff9e18', borderRight:'15px solid #ff9e18'}} className={variables.wu_item}>
+                    <div style={{ borderLeft:'15px solid #ff9e18', borderRight:'15px solid #ff9e18'}} className={`${variables.wu_item} ${variables.fadeIn}`}>
                         <div className={`${variables.wu_title} ${montserrat.className}`}>
                             Expertise
                         </div>
@@ -24,7 +24,7 @@ const WhyUs = () => {
                             exceptional results.
                         </div>
                     </div>
-                    <div style={{borderLeft:"15px solid #00263e", borderRight:"15px solid #00263e"}} className={variables.wu_item}>
+                    <div style={{ borderLeft:"15px solid #00263e", borderRight:"15px solid #00263e"}} className={`${variables.wu_item} ${variables.fadeIn}`}>
                         <div className={`${variables.wu_title} ${montserrat.className}`}>
                             Customized Solutions
                         </div>
@@ -35,7 +35,7 @@ const WhyUs = () => {
                             your software to adapt and grow with your evolving business.
                         </div>
                     </div>
-                    <div style={{borderLeft:"15px solid #00c18b", borderRight:"15px solid #00c18b"}} className={variables.wu_item}>
+                    <div style={{ borderLeft:"15px solid #00c18b", borderRight:"15px solid #00c18b"}} className={`${variables.wu_item} ${variables.fadeIn}`}>
                         <div className={`${variables.wu_title} ${montserrat.className}`}>
                             Timely Delivery
                         </div>
@@ -46,7 +46,7 @@ const WhyUs = () => {
                             practices, ensuring high-quality software.
                         </div>
                     </div>
-                    <div className={variables.wu_item}>
+                    <div className={`${variables.wu_item} ${variables.fadeIn}`}>
                         <div className={`${variables.wu_title} ${montserrat.className}`}>
                             Customer Support
                         </div>

@@ -4,7 +4,7 @@ const montserrat = Montserrat({ subsets: ['latin'] })
 
 const Transform = ()=>{
     return(<div className={variables.transform_container}>
-        <div className={variables.transform_inner}>
+        <div className={`${variables.fadeIn} ${variables.transform_inner}`}>
             <div className={`${variables.transform_title} ${montserrat.className}`}>
                 Transform Your Business
             </div>

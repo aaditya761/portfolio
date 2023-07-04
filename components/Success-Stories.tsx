@@ -73,7 +73,7 @@ const SuccessStories = () => {
     ]
 
     return (<div id={"clients"} className={variables.section}>
-        <div className={variables.success_inner}>
+        <div className={`${variables.success_inner} ${variables.fadeIn}`}>
             <div style={{padding: "4rem", color: "white"}}
                  className={`${variables.section_title} ${montserrat.className}`}>
                 Some of Our Clients

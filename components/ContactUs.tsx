@@ -63,14 +63,14 @@ const ContactUs = () => {
     return (
         <div id={"contact-us"} className={variables.transform_container}>
             <div className={variables.transform_inner}>
-                <div className={`${variables.transform_title} ${montserrat.className}`}>
+                <div className={`${variables.transform_title} ${variables.fadeIn} ${montserrat.className}`}>
                     Wanna talk with us
                 </div>
-                <div className={`${variables.transform_desc} ${montserrat.className}`}>
+                <div className={`${variables.transform_desc} ${variables.fadeIn} ${montserrat.className}`}>
                     Get ready to unlock the power of technology to accelerate your growth
                 </div>
                 <form>
-                    <div className={variables.contact_form}>
+                    <div className={`${variables.fadeIn} ${variables.contact_form}`}>
                         <div>
                             <input
                                 name="user_name"
@@ -99,7 +99,7 @@ const ContactUs = () => {
                     <div>
             <textarea
                 name="message"
-                className={variables.contact_textarea}
+                className={`${variables.fadeIn} ${variables.contact_textarea}`}
                 placeholder="Write your Message..."
                 rows={4}
                 value={contactData.message}
@@ -109,7 +109,7 @@ const ContactUs = () => {
             />
                     </div>
                 </form>
-                <div className={variables.transform_button}>
+                <div className={`${variables.fadeIn} ${variables.transform_button}`}>
                     <div
                         className={`${variables.transform_btn_text} ${montserrat.className}`}
                         onClick={() => sendEmail()}

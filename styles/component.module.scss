@@ -752,3 +752,28 @@ $breakpoint-tablet: 768px;
 
 
 }
+
+.animationCSS {
+  animation-duration: 1000ms;
+  animation-timing-function: ease;
+  animation-delay: 200ms;
+  animation-name: cssAnimation;
+  animation-direction: normal;
+  animation-fill-mode: both;
+  animation-iteration-count: 1;
+}
+
+.fadeIn {
+  opacity: 0;
+}
+
+
+// cssAnimation
+@keyframes cssAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
