@@ -64,10 +64,10 @@ const ContactUs = () => {
         <div id={"contact-us"} className={variables.transform_container}>
             <div className={variables.transform_inner}>
                 <div className={`${variables.transform_title} ${montserrat.className}`}>
-                    Wanna talk with us
+                    Contact Us
                 </div>
-                <div className={`${variables.transform_desc} ${montserrat.className}`}>
-                    Get ready to unlock the power of technology to accelerate your growth
+                <div className={`${variables.contact_us_desc} ${montserrat.className}`}>
+                    Have a question, need a consultation, or want to request a quote? Feel free to reach out to us using the contact form below, and we will respond promptly to discuss your project goals and provide personalized recommendations.
                 </div>
                 <form>
                     <div className={variables.contact_form}>
