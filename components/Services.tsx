@@ -42,7 +42,7 @@ const Services = () => {
                 </div>
             </div>
             <div className={variables.services_card_image_cont}>
-                <div>
+                <div style={{transform: "skew(2deg, -20deg)"}}>
                     <Lottie style={{height:"30rem"}} animationData={WebDevelopment} />
                 </div>
             </div>
@@ -50,7 +50,7 @@ const Services = () => {
         <div className={variables.services_inner}>
             <div className={variables.services_card_image_cont}>
                 <div>
-                    <Lottie style={{height:"30rem"}} animationData={Mobile} />
+                    <Lottie style={{height:"30rem", transform:"scale(0.8)"}} animationData={Mobile} />
                 </div>
             </div>
             <div className={variables.services_card_text_div}>
@@ -76,7 +76,7 @@ const Services = () => {
                 </div>
             </div>
             <div className={variables.services_card_image_cont}>
-                <div>
+                <div style={{transform:"translate(3.5rem, 0px)"}}>
                     <Lottie style={{height:"30rem"}} animationData={AI} />
                 </div>
             </div>
