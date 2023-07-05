@@ -1,23 +1,21 @@
-import { Inter } from 'next/font/google'
-import About from "@/components/About";
-import Navbar from "@/components/Navbar";
-import Hero from "@/components/Hero";
-import SuccessStories from "@/components/Success-Stories";
-import WhyUs from "@/components/WhyUs";
-import Transform from "@/components/Transform";
-import Process from "@/components/Process";
-import Services from "@/components/Services";
-import ContactUs from '@/components/ContactUs';
-import Testimonials from "@/components/Testimonials";
+import dynamic from "next/dynamic";
+const Navbar = dynamic(() => import('@/components/Navbar'));
+const Hero = dynamic(() => import('@/components/Hero'));
+const SuccessStories = dynamic(() => import('@/components/Success-Stories'));
+const WhyUs = dynamic(() => import('@/components/WhyUs'));
+const Transform = dynamic(() => import('@/components/Transform'));
+const Process = dynamic(() => import('@/components/Process'));
+const Services = dynamic(() => import('@/components/Services'));
+const ContactUs = dynamic(() => import('@/components/ContactUs'));
+const Testimonials = dynamic(() => import('@/components/Testimonials'));
 
-const inter = Inter({
-    subsets: ["latin"],
-    weight: ['400', '500', '600']
-})
+
+import {Montserrat} from "next/font/google";
+const montserrat = Montserrat({subsets: ['latin']})
 
 export default function Home() {
     return (
-        <div className={inter.className}>
+        <div className={montserrat.className}>
             <div>
                 <Navbar/>
                 <Hero/>

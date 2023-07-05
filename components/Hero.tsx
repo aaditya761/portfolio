@@ -1,9 +1,9 @@
 "use client"
 import variables from "../styles/component.module.scss";
-import {Montserrat} from "next/font/google";
 import Lottie from "lottie-react";
 import Hero1 from "../public/images/hero.json";
 
+import {Montserrat} from "next/font/google";
 const montserrat = Montserrat({subsets: ['latin']})
 
 function Hero() {

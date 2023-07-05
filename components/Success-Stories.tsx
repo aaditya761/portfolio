@@ -2,6 +2,10 @@
 import variables from '../styles/component.module.scss';
 import Image from 'next/image';
 import {Montserrat} from "next/font/google";
+import Stanza from "../public/images/clients/stanza.png";
+import Asian from "../public/images/clients/asian.webp";
+import Seniority from "../public/images/clients/seniority.jpg";
+import Maker from "../public/images/clients/maker.png";
 
 const montserrat = Montserrat({subsets: ['latin']})
 
@@ -28,7 +32,7 @@ const SuccessStories = () => {
 
     const data: Array<{
         id: string,
-        image: string,
+        image: any,
         url: string,
         name: string,
         industry: string,
@@ -36,7 +40,7 @@ const SuccessStories = () => {
     }> = [
         {
             id: "1",
-            image: require("../public/images/clients/stanza.png"),
+            image: Stanza,
             url: "https://www.stanzaliving.com/",
             industry: "Co-living",
             name: "Stanza Living",
@@ -45,7 +49,7 @@ const SuccessStories = () => {
         },
         {
             id: "2",
-            image: require("../public/images/clients/asian.webp"),
+            image: Asian,
             url: "https://www.asianfootwears.com/",
             industry: "Footwear",
             name: "Asian Footwear",
@@ -54,7 +58,7 @@ const SuccessStories = () => {
         },
         {
             id: "3",
-            image: require("../public/images/clients/seniority.jpg"),
+            image: Seniority,
             url: "https://seniority.in/",
             industry: "Health Care",
             name: "Seniority",
@@ -63,7 +67,7 @@ const SuccessStories = () => {
         },
         {
             id: "4",
-            image: require("../public/images/clients/maker.png"),
+            image: Maker,
             url: "https://makerandson.com/",
             industry: "Luxury Sofas",
             name: "Maker&Son",
