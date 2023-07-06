@@ -67,7 +67,9 @@ const ContactUs = () => {
                     Contact Us
                 </div>
                 <div className={`${variables.contact_us_desc} ${montserrat.className}`}>
-                    Have a question, need a consultation, or want to request a quote? Feel free to reach out to us using the contact form below, and we will respond promptly to discuss your project goals and provide personalized recommendations.
+                    Have a question, need a consultation, or want to request a quote? Feel free to reach out to us using
+                    the contact form below, and we will respond promptly to discuss your project goals and provide
+                    personalized recommendations.
                 </div>
                 <form>
                     <div className={variables.contact_form}>
@@ -95,18 +97,18 @@ const ContactUs = () => {
                                 }
                             />
                         </div>
-                    </div>
-                    <div>
-            <textarea
-                name="message"
-                className={variables.contact_textarea}
-                placeholder="Write your Message..."
-                rows={4}
-                value={contactData.message}
-                onChange={(e) =>
-                    setContactData({...contactData, message: e.target.value})
-                }
-            />
+                        <div>
+                            <textarea
+                                name="message"
+                                className={variables.contact_textarea}
+                                placeholder="Write your Message..."
+                                rows={4}
+                                value={contactData.message}
+                                onChange={(e) =>
+                                    setContactData({...contactData, message: e.target.value})
+                            }
+                            />
+                        </div>
                     </div>
                 </form>
                 <div className={variables.transform_button}>
@@ -119,10 +121,12 @@ const ContactUs = () => {
                 </div>
             </div>
             {isLoading ? <div className={variables.loader_container}>
-                <Lottie style={{height:"15rem"}} animationData={Loader}/>
+                <Lottie style={{height: "15rem"}} animationData={Loader}/>
             </div> : null}
             {isSuccessMessageVisible ? <div className={variables.mail_sent_container}>
-                <div style={{position:"fixed", top:"50%"}} className={`${variables.transform_title} ${montserrat.className}`}>Message sent successfully</div>
+                <div style={{position: "fixed", top: "50%"}}
+                     className={`${variables.transform_title} ${montserrat.className}`}>Message sent successfully
+                </div>
                 <Lottie animationData={Success}/>
             </div> : null}
         </div>

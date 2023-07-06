@@ -49,7 +49,7 @@ const Services = () => {
         </div>
         <div className={variables.services_inner_1}>
             <div className={variables.services_card_image_cont}>
-                <div>
+                <div className={variables.mobile_services_img}>
                     <Lottie className={variables.services_image_height} animationData={Mobile} />
                 </div>
             </div>

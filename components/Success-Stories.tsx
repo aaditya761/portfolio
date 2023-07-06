@@ -11,9 +11,16 @@ const montserrat = Montserrat({subsets: ['latin']})
 
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
+import {useEffect, useState} from "react";
 
 
 const SuccessStories = () => {
+
+    const [width, setWidth] = useState(0);
+
+    useEffect(()=>{
+        setWidth(window.innerWidth)
+    }, [width])
 
     const indicatorStyles = {
         background: '#fff',
@@ -78,8 +85,7 @@ const SuccessStories = () => {
 
     return (<div id={"clients"} className={variables.section}>
         <div className={variables.success_inner}>
-            <div style={{padding: "4rem", color: "white"}}
-                 className={`${variables.section_title} ${montserrat.className}`}>
+            <div className={`${variables.success_section_title} ${montserrat.className}`}>
                 Some of Our Clients
             </div>
             <Carousel
@@ -106,8 +112,9 @@ const SuccessStories = () => {
                 showArrows={false}
                 thumbWidth={160}
                 centerMode={true}
+                stopOnHover={true}
                 transitionTime={3000}
-                centerSlidePercentage={30}
+                centerSlidePercentage={width<768?100:30}
             >
             {/*<div className={variables.success_container}>*/}
                 {
