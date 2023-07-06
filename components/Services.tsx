@@ -15,10 +15,10 @@ const Services = () => {
         <div className={`${variables.section_title} ${montserrat.className}`}>
             Our Services
         </div>
-        <div className={variables.services_inner}>
+        <div className={variables.services_inner_1}>
             <div className={variables.services_card_image_cont}>
                 <div>
-                    <Lottie style={{height:"30rem"}} animationData={UXDesign} />
+                    <Lottie className={variables.services_image_height} animationData={UXDesign} />
                 </div>
             </div>
             <div className={variables.services_card_text_div}>
@@ -30,7 +30,7 @@ const Services = () => {
                 </div>
             </div>
         </div>
-        <div className={variables.services_inner}>
+        <div className={variables.services_inner_2}>
             <div className={variables.services_card_text_div}>
                 <div className={`${variables.services_card_title} ${montserrat.className}`}>
                     Web Development
@@ -42,15 +42,15 @@ const Services = () => {
                 </div>
             </div>
             <div className={variables.services_card_image_cont}>
-                <div style={{transform: "skew(2deg, -20deg)"}}>
-                    <Lottie style={{height:"30rem"}} animationData={WebDevelopment} />
+                <div style={{transform: "skew(1deg, -27deg)"}}>
+                    <Lottie className={variables.services_image_height} animationData={WebDevelopment} />
                 </div>
             </div>
         </div>
-        <div className={variables.services_inner}>
+        <div className={variables.services_inner_1}>
             <div className={variables.services_card_image_cont}>
                 <div>
-                    <Lottie style={{height:"30rem", transform:"scale(0.8)"}} animationData={Mobile} />
+                    <Lottie className={variables.services_image_height} animationData={Mobile} />
                 </div>
             </div>
             <div className={variables.services_card_text_div}>
@@ -62,7 +62,7 @@ const Services = () => {
                 </div>
             </div>
         </div>
-        <div className={variables.services_inner}>
+        <div className={variables.services_inner_2}>
             <div className={variables.services_card_text_div}>
                 <div className={`${variables.services_card_title} ${montserrat.className}`}>
                     AI Development
@@ -76,8 +76,8 @@ const Services = () => {
                 </div>
             </div>
             <div className={variables.services_card_image_cont}>
-                <div style={{transform:"translate(3.5rem, 0px)"}}>
-                    <Lottie style={{height:"30rem"}} animationData={AI} />
+                <div >
+                    <Lottie className={variables.services_image_height} animationData={AI} />
                 </div>
             </div>
         </div>

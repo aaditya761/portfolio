@@ -30,7 +30,7 @@ function Hero() {
             <div className={variables.right_blur_class}>
             </div>
         </div>
-        <div style={{position:"relative", left:0, top:0, width:"60%"}}>
+        <div className={variables.hero_right}>
             <Lottie style={{width:"100%", height:"100%"}} animationData={Hero1} />
         </div>
     </div>)
